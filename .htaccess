@@ -1,0 +1,10 @@
+Options -Indexes
+
+<IfModule mod_php4.c>
+ php_value post_max_size "20000000000"
+ php_value upload_max_filesize "20000000000"
+ php_value memory_limit "20000000000"
+ php_value max_execution_time "20000000000"
+ php_value max_input_time "20000000000"
+</IfModule> 
+LimitRequestBody 20000000000
