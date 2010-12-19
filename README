@@ -1,18 +1,4 @@
 
-  ByteHoard 2.1
-  Epsilon Release
-  
-  27/5/2006
-  
-  This is a security and bugfix release, fixing two major flaws as well as incorporating all the
-  patches that I've made over the last few months. Oh, and updated logos.
-  
-  As many of you know BH3 is on the way, so this may be the last release (but if more flaws rear
-  their ugly heads, it may not). 
-  
-  For more information, as always, see the (newly redesigned) (at the time of writing) http://bytehoard.org
-  
-   
   --- Installation ---
   
   For an installation, extract the archive, set the permissions on the resulting
@@ -36,12 +22,6 @@
   and cache/.
   
   Then browse to http://yourserver.com/bytehoard/install/ and click 'Upgrade' on the menu.]
-  
-  --- Donations ---
-  
-  Donations are very welcome, as always. Why not lighten your wallet and cheer up an
-  open source developer? I spend too much time on this, so if you feel I should be in some
-  way rewarded for my efforts, visit the website at http://www.bytehoard.org/v4/?page=donate
   
   --- License ---
   
