@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Folder Views</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="ByteHoard 2.1 Developer Reference"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="ByteHoard Concepts"
+HREF="c188.html"><LINK
+REL="PREVIOUS"
+TITLE="The Language Files &#38; Internationalisation"
+HREF="x234.html"><LINK
+REL="NEXT"
+TITLE="Appendix"
+HREF="a259.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>ByteHoard 2.1 Developer Reference</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x234.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. ByteHoard Concepts</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="a259.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="concepts_folderviews"
+>3.7. Folder Views</A
+></H1
+><P
+>Back for ByteHoard 2.1 are multiple folder views. Currentely in the works are icon, tiles, thumbnails and list views.</P
+><P
+>What happens is that when the folder viewer is called upon, it looks in the database to see if a user has a set view mode for that directory. If they don't, it looks for a global setting, If that doesn't exist, it looks at the contents and uses either tiles or thumbnails based on the directory contents (more thumbnailable files or less).</P
+><P
+>The directory viewer then passes it off to the layout, which then uses the right view. If the layout doesn't have that view it can do whatever it likes; the suggestion is to default to tiles mode, but it depends on the template's design principles. If the layout is tailored towards things like PDAs or mobile phones, then it may want to use list mode or a special mode all the time, and ignore most view mode hints. However, for some special modes, such as the suggested HTML view mode for directories with index.html files in them, these special templates may have to abide by those. This aspect isn't yet finalised.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x234.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="a259.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>The Language Files &#38; Internationalisation</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c188.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Appendix</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

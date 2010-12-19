@@ -1,0 +1,18 @@
+
+  UPGRADING BYTEHOARD
+  ===================
+
+Please note that you can only upgrade from 2.1 Alpha to 2.1 Beta.
+Support from upgrading from 2.0.x will appear in the next release.
+
+To upgrade from 2.1 Alpha:
+ - Delete all files in the alpha directory apart from config.inc.php, the 
+   cache/ directory and the filestorage/ directory.
+ - Copy the new files from the beta archive into the old directory.
+   You need not worry about overwriting anything; config.inc.php does
+   not exist in release archives and the filestorage/ and cache/ directories
+   are empty.
+ - Browse to http://your-server/bytehoard-dir/install.php.
+ - Accept the license if you agree and click 'Upgrade'. Select '2.1 Alpha'
+   and read the warnings and information. Click 'Upgrade' to upgrade.
+ - Once the upgrade is complete you may use the system as before.

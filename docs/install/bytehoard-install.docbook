@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN">
+ 
+<book id="bytehoard21-install" lang="en">
+ 
+<bookinfo>
+<title>ByteHoard 2.1 Installation Guide</title>
+
+
+
+<date>23rd July 2005</date>
+<releaseinfo>0.1</releaseinfo>
+
+<abstract>
+<para>
+A guide to the installation and upgrade process.
+</para>
+</abstract>
+
+<copyright>
+<holder>Andrew Godwin</holder>
+<year>2005</year>
+</copyright>
+
+
+</bookinfo>
+<authorgroup>
+<author role="ByteHoard Creator">
+<firstname>Andrew</firstname>
+<surname>Godwin</surname>
+<email>andrew@bytehoard.org</email>
+</author>
+</authorgroup>
+ 
+
+
+	<chapter id="before">
+	<title>Before You Install</title>
+	
+	<sect1 id="welcome">
+		<title>Welcome</title>
+		<para>Welcome to ByteHoard 2.1! This guide will help you get ByteHoard installed on your server and hopefully help you if things go wrong.</para>
+		<para>ByteHoard is Free Software, and comes with absolutely no warranty as far as permitted by applicable law. Software can never be 100% perfect, and ByteHoard is no exception. As with all new software, we recommend doing a full backup before installing.</para>
+		<para>If you find an error or omission, or have comments, please tell us; contact details can be found in the appendix.</para>
+	</sect1>
+
+	<sect1 id="requirements">
+		<title>Requirements</title>
+		<para>To install ByteHoard you will need to have the following software installed:
+			<itemizedlist>
+				<listitem><para>PHP 4.2 or greater</para></listitem>
+				<listitem><para>A supported database (currentely MySQL)</para></listitem>
+				<listitem><para>A webserver, preferably Apache</para></listitem>
+				<listitem><para>ImageMagick or the GD extension (optional; for thumbnails)</para></listitem>
+			</itemizedlist>
+		</para>
+		<note>PHP5 has not been fully tested. ByteHoard is reported to work, but we can make no guarantees.</note>
+		<note>MySQL 4.1 and newer uses an authentication system not supported by PHP's mysql library. See <ulink url="http://dev.mysql.com/doc/mysql/en/old-client.html">this page</ulink> for more information.</note>
+		<note>Webservers apart from Apache are not well tested. Microsoft IIS has been reported to work, but there is no news on other webservers.</note>
+	</sect1>
+	
+	<sect1 id="getting">
+		<title>Getting ByteHoard</title>
+		<para>You can obtain the latest version of ByteHoard from the ByteHoard website at either <ulink url="http://bytehoard.org">bytehoard.org</ulink> or <ulink url="http://bytehoard.sf.net">bytehoard.sf.net.</ulink></para>
+	</sect1>
+	
+	</chapter>
+
+
+	<chapter id="unpacking">
+		<title>Unpacking and Preparation</title>
+		<sect1 id="unpack">
+			<title>Unpacking</title>
+			<para>First, extract the ByteHoard archive you have downloaded (it may be a zip, gzip or bzip2 file), being careful to preserve directory structure. You will find that it extracts to a directory of the form 'bytehoard-2.1???/', where ??? represents the version. You should rename this directory now; you cannot rename the directory after the installation without modifying the database. In the rest of this guide, we will assume this directory has been renamed to 'bytehoard/'.</para>
+		</sect1>
+		<sect1 id="chmod">
+			<title>Setting Permissions</title>
+			<para>Ensure that the entire ByteHoard directory tree is writable by the webserver, or the update and patching system will fail. If you do not want this to be possible, than as a strict minimum you must ensure the filestorage/ and cache directories and the config.inc.php file are writable (you may have to create config.inc.php first).</para>
+		</sect1>
+	</chapter>
+
+
+	<chapter id="installing">
+		<title>Installation</title>
+		<sect1 id="install">
+			<title>Running the Installer</title>
+			<para>A great deal of the hard work is done by the ByteHoard installer, which will set up the database and configuration files for you, as well as giving you a reasonable set of default values for everything. To run it, make sure you have followed the previous steps and then navigate to the URL of the directory you installed ByteHoard in. For example, if you installed it in /var/www/bytehoard, where /var/www is your webserver's document root, then navigate to http://your-server/bytehoard/.</para>
+			<para>You should now see the introduction. (If not, try http://your-server/bytehoard/install.php). The installation itself is self-explanatory; just follow the instructions.</para>
+		</sect1>
+		<sect1 id="postinstall">
+			<title>Post-Install</title>
+			<para>Once the installation has successfully completed, you can navigate to the ByteHoard URL (i.e. http://your-server/bytehoard/) and use the system. Administration is at http://your-server/bytehoard/administrator/. For information on administrating and using the system, see the respective documentation.</para>
+		</sect1>
+	</chapter>
+
+
+	<appendix id="appendix">
+	<title>Appendix</title>
+	
+	<sect1>
+	<title>Links & Locations</title>
+	
+	<para>
+	<ulink url="http://bytehoard.org">ByteHoard.org</ulink> - The ByteHoard website
+	</para>
+	
+	<para>
+	<ulink url="http://php.net">PHP.net</ulink> - PHP, the framework ByteHoard is built on.
+	</para>
+	
+	</sect1>
+	
+	</appendix>
+
+</book>

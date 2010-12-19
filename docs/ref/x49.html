@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Tables &#38; Descriptions</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="ByteHoard 2.1 Developer Reference"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Database Structure"
+HREF="c20.html"><LINK
+REL="PREVIOUS"
+TITLE="Common Field Names"
+HREF="x26.html"><LINK
+REL="NEXT"
+TITLE="ByteHoard Concepts"
+HREF="c187.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>ByteHoard 2.1 Developer Reference</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x26.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Database Structure</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="c187.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="dbstruct_tables"
+>2.3. Tables &#38; Descriptions</A
+></H1
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="dbstruct_tables_intro"
+>2.3.1. Introduction</A
+></H2
+><P
+>There are quite a few tables for bytehoard, and they seem to be increasing every day. Here's a rundown of them.</P
+><P
+>Remember these names are without prefixes - they will probably have bh2_ or something else in front of them in the database.</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="dbstruct_tables_tables"
+>2.3.2. Tables</A
+></H2
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_aclgroups"
+>2.3.2.1. aclgroups</A
+></H3
+><P
+>This table contains the permissions of a <FONT
+COLOR="RED"
+>group</FONT
+> for a <FONT
+COLOR="RED"
+>filepath</FONT
+>. <FONT
+COLOR="RED"
+>Status</FONT
+> is the permission. 1 is read, 2 is write, 3 is owner. 0 is obviously nothing.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_aclpublic"
+>2.3.2.2. aclpublic</A
+></H3
+><P
+>This table contains the permissions of the public (anonymous/guest users) for a <FONT
+COLOR="RED"
+>filepath</FONT
+>. <FONT
+COLOR="RED"
+>Status</FONT
+> is the permission. 1 is read, 2 is write, 3 is owner. 0 is obviously nothing.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_aclusers"
+>2.3.2.3. aclusers</A
+></H3
+><P
+>This table contains the permissions of a <FONT
+COLOR="RED"
+>username</FONT
+> for a <FONT
+COLOR="RED"
+>filepath</FONT
+>. <FONT
+COLOR="RED"
+>Status</FONT
+> is the permission. 1 is read, 2 is write, 3 is owner. 0 is obviously nothing.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_adminmodulesmenu"
+>2.3.2.4. adminmodulesmenu</A
+></H3
+><P
+>This contains the list of modules for the admin centre. Compare with modulesmenu.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_bandwidth"
+>2.3.2.5. bandwidth</A
+></H3
+><P
+>This contains bandwidth entries, for the new bandwidth tracking system. Each row represents one event. <FONT
+COLOR="RED"
+>username</FONT
+> is the username of the user who did it, <FONT
+COLOR="RED"
+>time</FONT
+> is the UNIX timestamp of when it occurred, <FONT
+COLOR="RED"
+>type</FONT
+> is upload/download ('up'/'down') and <FONT
+COLOR="RED"
+>bytes</FONT
+> is the number of bytes transferred.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_config"
+>2.3.2.6. config</A
+></H3
+><P
+>This contains rows of configuration values. The <FONT
+COLOR="RED"
+>variable</FONT
+> field specifies the name of the variable that the <FONT
+COLOR="RED"
+>value</FONT
+> will be loaded into. They end up as <PRE
+CLASS="programlisting"
+>$bhconfig['variable'] = value</PRE
+>
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_filecodes"
+>2.3.2.7. filecodes</A
+></H3
+><P
+>This table has the links between those filecodes and the filepaths. <FONT
+COLOR="RED"
+>filecode</FONT
+> is the filecode that gets passed in the URL. <FONT
+COLOR="RED"
+>filepath</FONT
+> is the path of the file that the code links to. <FONT
+COLOR="RED"
+>expires</FONT
+> is the timestamp when the link expires.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_groupusers"
+>2.3.2.8. groupusers</A
+></H3
+><P
+>This table links user with groups. An entry normally means membership. Status isn't really used yet, but should refer to the position of the user in the group (moderator, user, peon, etc.).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_logactions"
+>2.3.2.9. logactions</A
+></H3
+><P
+>This table specifies what should be done when an action or error is logged. <FONT
+COLOR="RED"
+>Type</FONT
+> is the internal name for the type of action (i.e. BH_LOGIN or BH_WRONG_FILE). <FONT
+COLOR="RED"
+>Action</FONT
+> is the name for the internal action to use (onscreen, file, email etc.) and <FONT
+COLOR="RED"
+>parameters</FONT
+> are the extra parameters the action might need (email address, for example). For more details on this see the logging system section.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_metadata"
+>2.3.2.10. metadata</A
+></H3
+><P
+>This contains metadata entries for <FONT
+COLOR="RED"
+>filepath</FONT
+>s. <FONT
+COLOR="RED"
+>Metaname</FONT
+> is the name of the property (e.g. size, description) and <FONT
+COLOR="RED"
+>Metavalue</FONT
+> is the value (this is sort of like the <A
+HREF="x49.html#dbstruct_tables_tables_config"
+>config table</A
+>).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_modules"
+>2.3.2.11. modules</A
+></H3
+><P
+>This contains the module information. <FONT
+COLOR="RED"
+>Module</FONT
+> is the ID of the module (the filename without .inc.php), <FONT
+COLOR="RED"
+>file</FONT
+> is the filename, and <FONT
+COLOR="RED"
+>name</FONT
+>, <FONT
+COLOR="RED"
+>description</FONT
+>, and <FONT
+COLOR="RED"
+>author</FONT
+> are the obvious details of the file.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_modulesaccesslevel"
+>2.3.2.12. modulesaccesslevel</A
+></H3
+><P
+>This table links the access levels that user have on files with the modules that are displayed. The module and accesslevel are specified, along with whether the module should be displayed for that access level. Examples: The download module works for access levels 1, 2 and 3, while the delete one only works for 2 and 3.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_modulesdirectory"
+>2.3.2.13. modulesdirectory</A
+></H3
+><P
+>This table lists the modules displayed as actions for directories. <FONT
+COLOR="RED"
+>module</FONT
+> is the module and <FONT
+COLOR="RED"
+>status</FONT
+> should be set to 1 for the rule to be used.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_modulesfiletype"
+>2.3.2.14. modulesfiletype</A
+></H3
+><P
+>This table links the modules with their filetypes - the value '*' for the <FONT
+COLOR="RED"
+>filetype</FONT
+> field means for all files (for downloads, for example), while a file extension (like 'html') will only let the module work for that one type (e.g. for the HTML editor).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_modulesmenu"
+>2.3.2.15. modulesmenu</A
+></H3
+><P
+>This table links the modules with 'menus' - the only main one is 'page', which is the list of accessible pages viewable in the toolbar, like logout and options. Again, status is 1 for display and 0 to not show.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_modulesusertype"
+>2.3.2.16. modulesusertype</A
+></H3
+><P
+>This table links the modules displayed to the user types thay are displayed for. 'guest', 'normal' and 'admin' are the three main usertypes, and you can show modules based on which usertype is viewing the page. Examples include the login page only being shown in the toolbar for guests, and logout only being sown for users and admins.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_packages"
+>2.3.2.17. packages</A
+></H3
+><P
+>This table contains the details of all packages installed in this version of ByteHoard. <FONT
+COLOR="RED"
+>code</FONT
+> is the ID/code of the package (unique), <FONT
+COLOR="RED"
+>name</FONT
+> is its actual name, with spaces, apostrophes etc., <FONT
+COLOR="RED"
+>description</FONT
+> is its description, <FONT
+COLOR="RED"
+>version</FONT
+> is the version installed and <FONT
+COLOR="RED"
+>type</FONT
+> is the type of package (BH update, language, skin, layout, mod, etc.).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_passwordresets"
+>2.3.2.18. passwordsresets</A
+></H3
+><P
+>This table contains password reset requests. <FONT
+COLOR="RED"
+>username</FONT
+> is the username of the reset request, <FONT
+COLOR="RED"
+>resetid</FONT
+> is the reset code which gets passed in the URL, <FONT
+COLOR="RED"
+>time</FONT
+> is when the request was created (used to expire them after a certain time period).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_registrations"
+>2.3.2.19. registrations</A
+></H3
+><P
+>This table contains registration requests. <FONT
+COLOR="RED"
+>regid</FONT
+> is the id of the request (used for confirmation link), <FONT
+COLOR="RED"
+>status</FONT
+> is the status of the request (0 = pending confirmation, 1 = pending moderation), <FONT
+COLOR="RED"
+>regtime</FONT
+> is the time when the requst was created (used to expire them).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_texts"
+>2.3.2.20. texts</A
+></H3
+><P
+>This table contains the texts, such as the FAQ and welcome message, for the site. <FONT
+COLOR="RED"
+>Textname</FONT
+> is the ID/name of the text and <FONT
+COLOR="RED"
+>textbody</FONT
+> is the content of the text (normally HTML).
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_uploads"
+>2.3.2.21. uploads</A
+></H3
+><P
+>Contains entries for the uploads to let the popups work right. <FONT
+COLOR="RED"
+>sessionid</FONT
+> is the... sessionid and <FONT
+COLOR="RED"
+>status</FONT
+> is a textual status string.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_userinfo"
+>2.3.2.22. userinfo</A
+></H3
+><P
+>This table is like the metadata table for users - it can contain things like full names, email addresses or even telephone numbers or the like. <FONT
+COLOR="RED"
+>Username</FONT
+> ties the records to a certain user and the <FONT
+COLOR="RED"
+>itemname</FONT
+> and <FONT
+COLOR="RED"
+>itemcontent</FONT
+> variables are just like the metaname and metainfo variables in the metadata table.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_users"
+>2.3.2.23. users</A
+></H3
+><P
+>The main users table. Contains <FONT
+COLOR="RED"
+>username</FONT
+>s, MD5 hashed <FONT
+COLOR="RED"
+>password</FONT
+>s, and the user <FONT
+COLOR="RED"
+>type</FONT
+>.
+		</P
+></DIV
+><DIV
+CLASS="sect3"
+><H3
+CLASS="sect3"
+><A
+NAME="dbstruct_tables_tables_usersviews"
+>2.3.2.24. usersviews</A
+></H3
+><P
+>Links <FONT
+COLOR="RED"
+>username</FONT
+>'s <FONT
+COLOR="RED"
+>view</FONT
+>s for <FONT
+COLOR="RED"
+>filepath</FONT
+>s.
+		</P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x26.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="c187.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Common Field Names</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c20.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>ByteHoard Concepts</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

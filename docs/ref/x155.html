@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML
+><HEAD
+><TITLE
+>Layouts</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.7"><LINK
+REL="HOME"
+TITLE="ByteHoard 2.1 Developer Reference"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="ByteHoard Concepts"
+HREF="c135.html"><LINK
+REL="PREVIOUS"
+TITLE="Modularity"
+HREF="x149.html"><LINK
+REL="NEXT"
+TITLE="The logging system"
+HREF="x166.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>ByteHoard 2.1 Developer Reference</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x149.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. ByteHoard Concepts</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x166.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="concepts_layouts"
+></A
+>3.4. Layouts</H1
+>
+	
+	
+	<DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="concepts_layouts_separation"
+></A
+>3.4.1. Separation</H2
+>
+	
+	<P
+>In this version of ByteHoard I'm introducing complete separation of the layout and actual processing. The modules simply call the layout class, pass it a few parameters (type of page, title, content) and then call its display() function. What the layout does is completely separate; the default one obviously displays the stuff in the relevant places, as well as showing any error messages that have appeared in the $bh_errors global variable, but it could simply show the files for a directory listing, just output plain text, or do things like change the backgrounds baedon the action or even the file types.</P
+>
+	</DIV
+>
+	
+	<DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="concepts_layouts_skins"
+></A
+>3.4.2. Skins</H2
+>
+	
+	<P
+>Of course, this introduced the problem of what skin designers were to do; with just this in place, making a new skin would invlove an understanding of PHP. So, in this vein, there is also a skinning system. This allows the images for the layout to be swapped around - the layout of the... layout doesn't change, but the images do. This means that anyone with a graphics editor can create a skin, somewhat akin to the old winamp 2.x skins, although with lots of pictures rather than one.</P
+>
+	</DIV
+>
+	
+	<DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="concepts_layouts_further"
+></A
+>3.4.3. Further Examples &#38; Explanation</H2
+>
+	
+	<P
+>The default layout is a good example of all the above mentioned ideas - the skins, where you can change the borders of the toolbar and the boxes, the separation, and everything else. Have a look at the code if you're interested; it uses includes to keep the code smaller and more manageable, so the major page sections are in separate files (and easy to edit and understand for someone with HTM knowledge).</P
+>
+	</DIV
+>
+	
+	</DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x149.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x166.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Modularity</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c135.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The logging system</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

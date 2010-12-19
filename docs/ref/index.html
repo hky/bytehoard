@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>ByteHoard 2.1 Developer Reference</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="NEXT"
+TITLE="Introduction"
+HREF="c17.html"></HEAD
+><BODY
+CLASS="book"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="BOOK"
+><A
+NAME="bytehoard21-ref"
+></A
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="title"
+><A
+NAME="AEN2"
+>ByteHoard 2.1 Developer Reference</A
+></H1
+><H3
+CLASS="author"
+><A
+NAME="AEN5"
+></A
+>Andrew Godwin</H3
+><P
+CLASS="copyright"
+>Copyright &copy; 2005 Andrew Godwin</P
+><DIV
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN11"
+></A
+><P
+>&#13;A guide to the internal naming, functions and design of ByteHoard.
+</P
+><P
+></P
+></DIV
+></DIV
+><HR></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+>1. <A
+HREF="c17.html"
+>Introduction</A
+></DT
+><DT
+>2. <A
+HREF="c21.html"
+>Database Structure</A
+></DT
+><DD
+><DL
+><DT
+>2.1. <A
+HREF="c21.html#dbstruct_intro"
+>Introduction to ByteHoard &#38; Databases</A
+></DT
+><DT
+>2.2. <A
+HREF="x27.html"
+>Common Field Names</A
+></DT
+><DT
+>2.3. <A
+HREF="x50.html"
+>Tables &#38; Descriptions</A
+></DT
+><DD
+><DL
+><DT
+>2.3.1. <A
+HREF="x50.html#dbstruct_tables_intro"
+>Introduction</A
+></DT
+><DT
+>2.3.2. <A
+HREF="x50.html#dbstruct_tables_tables"
+>Tables</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+>3. <A
+HREF="c188.html"
+>ByteHoard Concepts</A
+></DT
+><DD
+><DL
+><DT
+>3.1. <A
+HREF="c188.html#concepts_intro"
+>Introduction to ByteHoard Concepts</A
+></DT
+><DT
+>3.2. <A
+HREF="x193.html"
+>The filepath</A
+></DT
+><DT
+>3.3. <A
+HREF="x202.html"
+>Modularity</A
+></DT
+><DT
+>3.4. <A
+HREF="x208.html"
+>Layouts</A
+></DT
+><DD
+><DL
+><DT
+>3.4.1. <A
+HREF="x208.html#concepts_layouts_separation"
+>Separation</A
+></DT
+><DT
+>3.4.2. <A
+HREF="x208.html#concepts_layouts_skins"
+>Skins</A
+></DT
+><DT
+>3.4.3. <A
+HREF="x208.html#concepts_layouts_further"
+>Further Examples &#38; Explanation</A
+></DT
+></DL
+></DD
+><DT
+>3.5. <A
+HREF="x219.html"
+>The logging system</A
+></DT
+><DD
+><DL
+><DT
+>3.5.1. <A
+HREF="x219.html#concepts_logging_standard"
+>Standard Events</A
+></DT
+></DL
+></DD
+><DT
+>3.6. <A
+HREF="x234.html"
+>The Language Files &#38; Internationalisation</A
+></DT
+><DD
+><DL
+><DT
+>3.6.1. <A
+HREF="x234.html#concepts_i18n_edit"
+>Creating or Editing Language Files</A
+></DT
+></DL
+></DD
+><DT
+>3.7. <A
+HREF="x254.html"
+>Folder Views</A
+></DT
+></DL
+></DD
+><DT
+>A. <A
+HREF="a259.html"
+>Appendix</A
+></DT
+><DD
+><DL
+><DT
+>A.1. <A
+HREF="a259.html#AEN261"
+>Links &#38; Locations</A
+></DT
+></DL
+></DD
+></DL
+></DIV
+><DIV
+CLASS="LOT"
+><DL
+CLASS="LOT"
+><DT
+><B
+>List of Examples</B
+></DT
+><DT
+>3-1. <A
+HREF="x193.html#AEN198"
+>An example filepath</A
+></DT
+><DT
+>3-2. <A
+HREF="x234.html#concepts_i18n_eg_langline"
+>An example of a language include line</A
+></DT
+><DT
+>3-3. <A
+HREF="x234.html#concepts_i18n_eg_langinscript"
+>An example of a language call in a template</A
+></DT
+><DT
+>3-4. <A
+HREF="x234.html#concepts_i18n_edit_eg_hash"
+>How #USER# is handled</A
+></DT
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="c17.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Introduction</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

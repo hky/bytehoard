@@ -1,0 +1,59 @@
+
+
+body {
+    font-family : arial, sans-serif;
+    margin: 0px;
+    width: 100%;
+  }
+
+
+.toptitle {
+    font-size: 20px;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+  }
+
+
+.topbottomtitle {
+    font-size: 12px;
+    font-family: arial, sans-serif;
+    font-weight: normal;
+    color: black;
+  }
+
+
+.toolbarlink {
+    color: black;
+    text-decoration: none;
+    padding-left: 4px;
+  }
+
+
+.toolbarimgtd {
+    padding-left: 10px;
+  }
+
+
+.toolbartxttd {
+    padding-top: 3px;
+  }
+
+
+.filepanenamebar {
+    color: black;
+    font-weight: normal;
+    font-size: 25px;
+  }
+
+
+.filepanetitlebar td {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+.filenamelink {
+    color: black;
+    text-decoration: none;
+  }

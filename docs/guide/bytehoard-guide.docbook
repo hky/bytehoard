@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN">
+ 
+<book id="bytehoard21-ref" lang="en">
+ 
+<bookinfo>
+<title>ByteHoard 2.1 User Guide</title>
+
+<authorgroup>
+<author>
+<firstname>Andrew</firstname>
+<surname>Godwin</surname>
+<email>andrew@bytehoard.org</email>
+</author>
+</authorgroup>
+
+<date>13th April 2005</date>
+<releaseinfo>0.1</releaseinfo>
+
+<abstract>
+<para>
+A guide for end-users of the ByteHoard.
+</para>
+</abstract>
+
+<copyright>
+<holder>Andrew Godwin</holder>
+<year>2005</year>
+</copyright>
+
+
+</bookinfo>
+<author role="ByteHoard Creator">Andrew Godwin</author>
+ 
+
+
+	<chapter id="introduction">
+	<title>Introduction</title>
+	
+	<para>If you are reading this it is likely you are a user of a ByteHoard system. This guide is designed to help you use the system to its full potential.</para>
+	
+	</chapter>
+	
+	
+	
+	
+	<chapter id="basicusage">
+	<title>Basic Usage</title>
+	
+	
+	<sect1 id="loggingin">
+	<title>Logging In</title>
+	
+	<para>First you need to open the Login screen by clicking the 'Login' link from the main page. You'll be asked for your username and password; type these in the textboxes and then click 'Login'. You might have to wait a few seconds, but you should then be logged in and presented with the main ByteHoard interface.</para>
+	
+	<para>If your login doesn't succeed, then remember that passwords are case-sensitive; make sure that any capitalisation is the same as before and that your Caps Lock and your Num Lock (if you are on a laptop or using a compact keyboard) are both off. If you still can't login, you might have to ask for your password to be reset.</para>
+
+	</sect1>
+
+	<sect1 id="navigation">
+	<title>Navigating the Interface</title>
+	
+	<para>
+	<note>If your ByteHoard installation has a different interface from the one described below, then it may be because your administrator has changed it. If so, then consider asking them if there's any points you're unsure on.</note>
+	</para>
+
+	<para>The ByteHoard interface is mainly occupied by the file lists - the area with filenames and icons. To do something to a file simply single-click on its icon or its filename; right-clicks and double-clicks are not needed. You will presented with a list of actions, where you can choose what you want to do.</para>
+
+	<para>Also visible are the links to different functions (such as Add Folder and Upload), the Views box and the Folders box. The Views box allows you to change the way you view the file lists; one has large icons and names (tiles); one is a smaller, space-saving view where they are all in a vertical list (list), and one shows you smaller versions of pictures and the like (thumbnails).
+	The Folders box gives you a quick way to access your folders as well as any others you may have access to, such as a common folder which everyone can access for extra files. What will appear varies across systems, but you will always see a / (root, or the top) directory, which has all the other directories inside of it, and your directory, which is normally named after your username.</para>
+
+	<para>The links may include the following:
+		<itemizedlist>
+			<listitem><para>Add Folder - This allows you to create a folder in an existing folder, to allow you to organise items in several levels or sections.</para></listitem>
+			<listitem><para>Upload - This allows you to transfer files from your computer to one of your folders.</para></listitem>
+			<listitem><para>Logout - This allows you to log out of the system, when you have finished using it.</para></listitem>
+			<listitem><para>Help - This gives you help and advice, possibly including this document.</para></listitem>
+		</itemizedlist>
+	</para>
+	
+	<para>That covers the main sections of the interface. Next, advice on using certain sections.</para>
+
+	</sect1>
+	
+	<sect1 id="specificpages">
+	<title>Using Common Pages</title>
+	
+	<sect2 id="upload">
+	<title>Uploading</title>
+	
+	<para>The Upload page allows you to transfer files from yor computer to one of the folders in the system. To open it, click the 'Upload' link that is visible on most pages.</para>
+	
+	<para>You will see a page with five boxes, which should have a 'Browse' or folder button next to them, along with a description of where the files are going (normally the last folder you visited) and an 'Upload' button.</para>
+	
+	<para>If you want to change where the files are going, select 'Change' next to where it says they are going and select the folder you want them to go to from the list displayed.</para>
+	
+	<para>Then, for each file you wish to upload, click a browse/folder button next to a blank box and select the file you want to upload. The path of the file on your computer will than appear in the box. You can upload up to five files at once.
+	
+	Once you have selected the files, click the 'Upload' button once and wait for the process to complete; it can take a while. There should be a status window showing you the upload is happening. Once the files have been uploaded, the folder you were uploading them into will be shown, along with the files themselves.</para>
+	
+	<para><note>If the upload page reappears after the upload has finished, or the upload never finishes, it may be that the file you are trying to upload is too large. You should try uploading just one file or try a smaller one.</note></para>
+	
+	</sect2>
+	
+	</sect1>
+	
+	</chapter>
+	
+	<appendix id="appendix">
+	<title>Appendix</title>
+	
+	<sect1>
+	<title>Links & Locations</title>
+	
+	<para>
+	<ulink url="http://bytehoard.org">ByteHoard.org</ulink> - The ByteHoard website
+	</para>
+	
+	<para>
+	<ulink url="http://php.net">PHP.net</ulink> - PHP, the framework ByteHoard is built on.
+	</para>
+	
+	</sect1>
+	
+	</appendix>
+
+</book>

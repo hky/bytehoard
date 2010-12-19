@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>The filepath</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="ByteHoard 2.1 Developer Reference"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="ByteHoard Concepts"
+HREF="c188.html"><LINK
+REL="PREVIOUS"
+TITLE="ByteHoard Concepts"
+HREF="c188.html"><LINK
+REL="NEXT"
+TITLE="Modularity"
+HREF="x202.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>ByteHoard 2.1 Developer Reference</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="c188.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. ByteHoard Concepts</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x202.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="concepts_filepath"
+>3.2. The filepath</A
+></H1
+><P
+>The filepath is arguably the most important part. It's the unique identifier for each file, and is what everything uses when referring to files.</P
+><P
+>The format is very similar to that of *nix-style paths; the root directory is the file storage directory for the installed system and it's just directories and a filename at the end after that. Nothing special, really.</P
+><P
+>&#13;	<DIV
+CLASS="example"
+><A
+NAME="AEN198"
+></A
+><P
+><B
+>Example 3-1. An example filepath</B
+></P
+><PRE
+CLASS="programlisting"
+>/andrew/pictures/pic1.jpg</PRE
+></DIV
+>
+	</P
+><P
+>The filepath is case-insensitive; when they're processed, they're reduced to lowercase and all extra slashes are trimmed out, and ones are added in the correct places if needed. Also note that using . or .. is not supported. It may get the right file, but it will confuse the ACL and file tables.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="c188.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x202.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>ByteHoard Concepts</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c188.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Modularity</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

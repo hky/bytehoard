@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Modularity</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="ByteHoard 2.1 Developer Reference"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="ByteHoard Concepts"
+HREF="c188.html"><LINK
+REL="PREVIOUS"
+TITLE="The filepath"
+HREF="x193.html"><LINK
+REL="NEXT"
+TITLE="Layouts"
+HREF="x208.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>ByteHoard 2.1 Developer Reference</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x193.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. ByteHoard Concepts</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x208.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="concepts_modules"
+>3.3. Modularity</A
+></H1
+><P
+>If you look at the ByteHoard code, you should notice one very important thing; everything is modularised. This is important, and shouldn't be too unfamiliar to many developers, but I'd just like to explain the details.</P
+><P
+>The modules are not grouped in any particular way; they are simply PHP files in the modules/ directory. When a new one is found, ByteHoard reads its name, description and author into the database, but where they are linked to and for whom is all specified in the database.
+	
+	<DIV
+CLASS="note"
+><P
+></P
+><TABLE
+CLASS="note"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="../images/note.gif"
+HSPACE="5"
+ALT="Note"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>What they were used for and by whom used to be specified in the files themselves, but i decided that a database-based approach would be much better and more flexible, even if it does require a bit more work in the code when adding or removing modules.</TD
+></TR
+></TABLE
+></DIV
+>
+	
+	</P
+><P
+>Even the core functions themself are modules - when a page is loaded, the index.php file simple loads the BH libraries, checks the current user is allowed to access the page (and perhaps does a login/logout), and then hands complete control over to the module. This allows for a lot of power - modules can do whatever they want. You could even install a CMS or a wiki in the modules directory, make the appropriate change of main file names (or use an include) and ByteHoard would quite happily pass control to it, and it would output correctly. Modules can use the layout &#38; templates at their own discretion; it would be silly not to, but it might be necessary, and in the case of the download and filelink modules, the module only wants to spit out the file and then exit.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x193.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x208.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>The filepath</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c188.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Layouts</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
