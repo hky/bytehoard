@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Installation
+=======
+#Installation
+>>>>>>> 528b209d96a2f88114f63e52c98141a1c8da6ff8
 
 For an installation, extract the archive, set the permissions on the resulting
 directory tree so your webserver can write to the files and browse to
