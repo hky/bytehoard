@@ -1,43 +1,39 @@
+#Installation
 
-  --- Installation ---
-  
-  For an installation, extract the archive, set the permissions on the resulting
-  directory tree so your webserver can write to the files and browse to 
-  http://yourserver.com/bytehoard/install/ (note it is no longer install.php).
-  
-  Follow the instructions.
-  
-  Please take down the administrator password on the final page, even if it's only
-  until you change it.
-  
-  --- Upgrade ---
-  
-  If you are upgrading from 2.1 Gamma or newer then just overwrite the current files with the
-  contents of the archive, as there are no database changes.
-  
-  ---
-  
-  For an upgrade from an earlier version, first backup the old bytehoard directory and database
-  and then erase all files from the old directory apart from config.inc.php, filestorage/
-  and cache/.
-  
-  Then browse to http://yourserver.com/bytehoard/install/ and click 'Upgrade' on the menu.]
-  
-  --- License ---
-  
-  Full license avaiable in the file LICENSE
-  
-  This program is free software; you can redistribute it and/or
-  modify it under the terms of the GNU General Public License
-  as published by the Free Software Foundation; either version 2
-  of the License, or (at your option) any later version.
-  
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-  
-  You should have received a copy of the GNU General Public License
-  along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-  
+For an installation, extract the archive, set the permissions on the resulting
+directory tree so your webserver can write to the files and browse to
+http://yourserver.com/bytehoard/install/ (note it is no longer install.php).
+
+Follow the instructions.
+
+Please take down the administrator password on the final page, even if it's
+only until you change it.
+
+# Upgrade
+
+If you are upgrading from 2.1 Gamma or newer then just overwrite the current
+files with the contents of the archive, as there are no database changes.
+
+For an upgrade from an earlier version, first backup the old bytehoard
+directory and database and then erase all files from the old directory apart
+from config.inc.php, filestorage/ and cache/.
+
+Then browse to http://yourserver.com/bytehoard/install/ and click 'Upgrade' on
+the menu.
+
+# License
+
+Full license avaiable in the file LICENSE
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+Place - Suite 330, Boston, MA 02111-1307, USA.
