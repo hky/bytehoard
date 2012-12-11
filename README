@@ -1,4 +1,4 @@
-#Installation
+# Installation
 
 For an installation, extract the archive, set the permissions on the resulting
 directory tree so your webserver can write to the files and browse to
